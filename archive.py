@@ -10,11 +10,10 @@ arcpy.env.overwriteOutput = True
 def Archive():
 
     #set workspace
-    arcpy.env.workspace = "Database Connections\\RPUD.sde" # Need to change this to work where it runs
+    arcpy.env.workspace = "Database Connections\\RPUD_TESTDB.sde" # Need to change this to work where it runs
 
     #list of datasets to archive
-    datasetList = ["RPUD.EVENTS","RPUD.ProjectTracking","RPUD.PU_Boundaries","RPUD.ReclaimedWaterDistributionNetwork","RPUD.Sewer_Features","RPUD.SewerCollectionNetwork","RPUD.WaterDistributionNetwork"]
-
+    datasetList = ["RPUD.EVENTS", "RPUD.Locates", "RPUD.ProjectTracking", "RPUD.PU_Boundaries", "RPUD.ReclaimedWaterDistributionNetwork","RPUD.Sewer_Features","RPUD.SewerCollectionNetwork", "RPUD.SewerInspectionTest", "RPUD.WaterDistributionNetwork", "RPUD.Water_Distribution_Features"]
     #date string for geodb name
     dateString = datetime.datetime.now().strftime("%Y%m%d")
 
